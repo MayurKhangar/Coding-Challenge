@@ -1,0 +1,24 @@
+Function CalculateTotalSpentByCateory(transaction)
+{
+const categoryMap{ };
+
+// Iterate through each transaction
+
+transactions.forEach(transaction=>{ 
+const { category, price) transaction;
+
+// If category already exists, add the price to its total spent
+
+if (categoryMap[category]) {
+
+categoryMap[category].totalSpent += price;
+}
+// Otherwise, create a new category with the current price.
+
+else {
+
+categoryMap [category] ={
+category: category,
+totalspent: price
+};
+}
