@@ -1,0 +1,20 @@
+        $(document).ready(function() {
+            function formatPhoneNumber(value) {
+                return value
+                    .replace(/\D/g, '') 
+                    .replace(/^(\d{3})(\d{3})(\d{0,4})$/, '$1-$2-$3') 
+                    .substring(0, 12); 
+            }
+            $('#MobileNumber').on('input', function() {
+                const formattedValue = formatPhoneNumber($(this).val());
+                $(this).val(formattedValue);
+            });
+
+            $('#saveButton').on('click', function() {
+                const unformattedValue = $('#MobileNumber').val().replace(/\D/g, '');
+
+                $('#MobileNumber').val(unformattedValue);
+
+                alert('Data saved: ' + unformattedValue); 
+            });
+        });
